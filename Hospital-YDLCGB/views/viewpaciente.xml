@@ -18,6 +18,7 @@
           <field name="nombre" />
           <field name="apellidos" />
           <field name="sintomas" />
+          <field name="diagnosticos" widget="many2many_tags" />
         </tree>
       </field>
     </record>

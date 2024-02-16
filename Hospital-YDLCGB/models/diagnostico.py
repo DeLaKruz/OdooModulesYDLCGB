@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 class diagnosticoModel(models.Model):
     _name = 'hospital_ydlcgb.diagnostico'
     _description = 'Diagnostico realizado en este hospital.'
+    _rec_name = 'tipo_diagnostico'
     
     tipo_diagnostico = fields.Char(String="Diagnostico")
     fecha_diagnostico = fields.Date(String="Fecha del diagnostico")

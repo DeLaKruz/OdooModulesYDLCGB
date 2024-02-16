@@ -9,3 +9,4 @@ class pacienteModel(models.Model):
     nombre = fields.Char(String="Nombre del paciente")
     apellidos = fields.Char(String="Apellidos del paciente")
     sintomas = fields.Char(String="Sintomas")
+    diagnosticos = fields.Many2many('hospital_ydlcgb.diagnostico',String="Diagnostico")
