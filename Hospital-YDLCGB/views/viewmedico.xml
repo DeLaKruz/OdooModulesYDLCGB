@@ -1,0 +1,29 @@
+<odoo>
+	<data>
+    <record model="ir.actions.act_window" id="action_hospital">
+      <field name="name">MEDICO</field>
+      <field name="res_model">hospital_ydlcgb.medico</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Base del menu -->
+    <menuitem name="Hospital" id="hospital_menu_root" />
+    
+    <!--<menuitem name="Opciones hospital" id="hospital_menu_1" parent="hospital_menu_root" />-->
+    
+    <menuitem name="Mostrar medico" id="hospital_menu_medico" parent="hospital_menu_root" action="action_hospital" />
+
+    <record model="ir.ui.view" id="medico_hospital">
+      <field name="name">Medico</field>
+      <field name="model">hospital_ydlcgb.medico</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre" />
+          <field name="apellidos" />
+          <field name="numero_colegiado" />
+          <field name="imagen" widget="image" class="oe_avatar"/>
+          <field name="pacientes" widget="many2many_tags" />
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,25 @@
+<odoo>
+	<data>
+    <record model="ir.actions.act_window" id="action_hospital2">
+      <field name="name">PACIENTE</field>
+      <field name="res_model">hospital_ydlcgb.paciente</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!--<menuitem name="Opciones hospital" id="hospital_menu_1" parent="hospital_menu_root" />-->
+    
+    <menuitem name="Mostrar paciente" id="hospital_menu_paciente" parent="hospital_menu_root" action="action_hospital2" />
+
+    <record model="ir.ui.view" id="paciente_hospital">
+      <field name="name">Paciente</field>
+      <field name="model">hospital_ydlcgb.paciente</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre" />
+          <field name="apellidos" />
+          <field name="sintomas" />
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

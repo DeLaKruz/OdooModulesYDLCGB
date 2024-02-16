@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital-ydlcgb_paciente,hospital_ydlcgb.paciente_default,model_hospital_ydlcgb_paciente,base.group_user,1,1,1,1
+access_hospital-ydlcgb_medico,hospital_ydlcgb.medico_default,model_hospital_ydlcgb_medico,base.group_user,1,1,1,1
+access_hospital-ydlcgb_diagnostico,hospital_ydlcgb.diagnostico_default,model_hospital_ydlcgb_diagnostico,base.group_user,1,1,1,1
