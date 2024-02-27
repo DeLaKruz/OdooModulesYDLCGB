@@ -1,0 +1,27 @@
+<odoo>
+	<data>
+    <record model="ir.actions.act_window" id="action_profesor">
+      <field name="name">PROFESOR</field>
+      <field name="res_model">instituto_ydlcgb.profesor</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Base del menu -->
+  <menuitem name="ESTUDIOS MENU ROOT" id="menu_principal"/>
+	<menuitem name="MENU PERSONAS" id="menu_personas" parent="menu_principal"/>
+	<menuitem name="PROFESORES" id="menu_profesores" parent="menu_personas" action="action_profesor"/>
+
+    <record model="ir.ui.view" id="profesor_instituto">
+      <field name="name">Profesor</field>
+      <field name="model">instituto_ydlcgb.profesor</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre" />
+          <field name="apellidos" />
+          <field name="DNI" />
+          <field name="modulos_impartidos" widget="one2many_tags" />
+        </tree>
+      </field>
+    </record>
+	</data>
+</odoo>

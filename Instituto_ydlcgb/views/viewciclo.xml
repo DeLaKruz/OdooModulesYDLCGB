@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_cicloformativo">
+            <field name="name">CICLO</field>
+            <field name="res_model">instituto_ydlcgb.cicloformativo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- Base del menú -->
+
+        <menuitem name="MENU ESTUDIOS" id="menu_estudios" parent="menu_principal" />
+        <menuitem name="Lista de Ciclos" id="menu_ciclos" parent="menu_estudios" action="action_cicloformativo"/>
+
+        <record model="ir.ui.view" id="ciclos_instituto">
+            <field name="name">Vista de Ciclo</field>
+            <field name="model">instituto_ydlcgb.cicloformativo</field>
+            <field name="arch" type="xml">
+                <tree>
+                <field name="nombre_ciclo" />
+                    <field name="modulos_ciclo" />
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

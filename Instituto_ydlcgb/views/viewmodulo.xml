@@ -1,0 +1,24 @@
+<odoo>
+	<data>
+    <record model="ir.actions.act_window" id="action_modulo">
+      <field name="name">MODULO</field>
+      <field name="res_model">instituto_ydlcgb.modulo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Base del menu -->
+  	<menuitem name="LIST MODULOS" id="menu_modulo" parent="menu_estudios" action="action_modulo"/>
+
+    <record model="ir.ui.view" id="modulo_instituto">
+      <field name="name">Modulo</field>
+      <field name="model">instituto_ydlcgb.modulo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombremodulo" />
+          <field name="horasmodulo" />
+          <field name="relacion_profesor" widget="many2one_tags"/>
+          <field name="relacion_alumno" widget="many2many_tags" />
+        </tree>
+      </field>
+    </record>
+	</data>
+</odoo>
